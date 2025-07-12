@@ -6,56 +6,61 @@
   <title>Page Not Found</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    * {
-      line-height: 1.2;
+    /* ページの余白をなくし、スクロールバーを非表示にする */
+    body, html {
       margin: 0;
-    }
-
-    html {
-      color: #888;
-      display: table;
-      font-family: sans-serif;
-      height: 100%;
-      text-align: center;
+      padding: 0;
+      overflow: hidden;
       width: 100%;
+      height: 100%;
     }
 
-    body {
-      display: table-cell;
-      vertical-align: middle;
-      margin: 2em auto;
+    /* 動画を配置するコンテナ */
+    .video-container {
+      position: fixed; /* 画面に固定 */
+      top: 0;
+      left: 0;
+      width: 100vw;  /* ビューポートの幅100% */
+      height: 100vh; /* ビューポートの高さ100% */
+      z-index: -1;   /* 他のコンテンツがある場合、最背面に配置する */
     }
 
-    h1 {
-      color: #555;
-      font-size: 2em;
-      font-weight: 400;
+    /* 動画自体のスタイル */
+    #rickroll-video {
+      width: 100%;
+      height: 100%;
+      /*
+       * アスペクト比を保ったまま、コンテナ全体を完全に覆うようにリサイズします。
+       * 動画の一部が画面からはみ出してトリミングされる場合があります。
+       */
+      object-fit: cover;
     }
 
-    p {
-      margin: 0 auto;
-      width: 280px;
-    }
-
-    @media only screen and (max-width: 280px) {
-
-      body,
-      p {
-        width: 95%;
-      }
-
-      h1 {
-        font-size: 1.5em;
-        margin: 0 0 0.3em;
-      }
-
+    /* 動画の上にコンテンツを載せる場合のサンプルスタイル */
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      font-family: sans-serif;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     }
   </style>
 </head>
+<!-- 画面全体に表示する動画のコンテナ -->
+  <div class="video-container">
+    <video autoplay loop muted playsinline id="rickroll-video">
+      <source src="https://dn720407.ca.archive.org/0/items/rick-roll/Rick%20Roll.mp4" type="video/mp4">
 
+    </video>
+  </div>
+
+
+  <div class="content">
+      <h1>404 page not found</h1>
+  </div>
 <body>
-  <h1>Page Not Found</h1>
-  <p>Sorry, but the page you were trying to view does not exist.</p>
 </body>
 
 </html>

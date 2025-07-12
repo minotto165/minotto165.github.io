@@ -86,11 +86,84 @@ textarea {
 
 body {
   margin: 0; /* この行を追加してbodyの余白をなくします */
+
+}
+
+/* start of header */
+
+/* css/style.css */
+
+header {
+  position: fixed; /* ヘッダーを画面に固定 */
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  height: 60px;
+  padding: 0 10;
+  background-color: rgba(255, 165, 0, 0.15); /* 背景色を設定（任意） */
+  z-index: 1000; /* 他の要素より手前に表示 */
+
+  border-radius: 30px;
+
+  border-color: rgba(255, 255, 255, 0.2);
+  border-width: 1px;
+  border-style: solid;
+
+  backdrop-filter: blur(20px);
+
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+
+  box-sizing: border-box; /* paddingとborderを高さに含める */
+
 }
 
 
+header h1{
+  font-family: "Funnel Display", sans-serif;
+  color: white;
+  font-weight: 400;
+  font-size: 25px;
+  margin: 0 10; /* ブラウザのデフォルトマージンをリセット */
+  position: relative; /* 位置調整の基準を現在の場所に設定 */
+  top: -2px; /* 現在の位置から2ピクセル上に移動 */
+}
 
-.header {
+header button{
+  font-family: "Funnel Sans", sans-serif;
+  color: white;
+  cursor: pointer;
+
+  margin-left: auto;
+
+  font-size: 18px;
+  height: 40px;
+  padding: 0 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  background-color: rgba(0, 0, 0, 0.15);
+
+  border-radius: 20px;
+  border-color: rgba(255, 255, 255, 0.2);
+  border-width: 1px;
+  border-style: solid;
+
+}
+
+/* end of header */
+
+
+
+
+
+/* start of titleSection */
+
+.titleSection {
   width: 100vw;
   height: 100vh;
   display: flex; /* Flexboxコンテナにする */
@@ -101,10 +174,7 @@ body {
   background:linear-gradient(to bottom, #000000, #150f00);
 }
 
-
-/* start of header */
-
-.headerLeft{
+.titleSectionLeft{
   width: 100%; /* 横幅いっぱいに広げる */
   display: grid;
   justify-items: start;     /* 水平方向の左揃え */
@@ -123,6 +193,7 @@ body {
   color: #888888;
   font-weight: 400;
   margin: 0;
+  font-family: "Funnel Display", sans-serif;
 }
 
 .firstLine{
@@ -168,6 +239,7 @@ body {
 /* start of content */
 .content{
   height: 500px;
+  background-color: black;
 }
 
 
