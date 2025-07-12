@@ -113,7 +113,8 @@ body {
 .titleText {
   display: flex;
   flex-direction: column;
-  font-family: "Funnel Display";
+  /* "Funnel Display"が使えない場合に備えて、汎用のsans-serifを追加 */
+  font-family: "Funnel Display", sans-serif;
   margin: 0;
 }
 
