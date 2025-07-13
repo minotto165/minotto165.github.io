@@ -84,26 +84,28 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-body {
-  margin: 0; /* この行を追加してbodyの余白をなくします */
-
-}
-
-/* start of header */
-
 /* css/style.css */
 
+body {
+  margin: 0; /* この行を追加してbodyの余白をなくします */
+  background-color: #0c0500; /* サイト全体の背景色をコンテンツに合わせて設定 */
+}
+
+
+
+
+/* start of header */
 header {
   position: fixed; /* ヘッダーを画面に固定 */
   top: 20px;
-  left: 20px;
-  right: 20px;
-  height: 60px;
+  left: 40px;
+  right: 40px;
+  height: 70px;
   padding: 0 10px;
-  background-color: rgba(255, 165, 0, 0.15); /* 背景色を設定（任意） */
+  background-color: rgba(30, 18, 0, 0.5); /* 背景色を設定（任意） */
   z-index: 1000; /* 他の要素より手前に表示 */
 
-  border-radius: 30px;
+  border-radius: 35px;
 
   border-color: rgba(255, 255, 255, 0.2);
   border-width: 1px;
@@ -130,7 +132,7 @@ header h1{
   top: -2px; /* 現在の位置から2ピクセル上に移動 */
 }
 
-header button{
+.headerButton{
   font-family: "Funnel Sans", sans-serif;
   color: white;
   cursor: pointer;
@@ -138,7 +140,7 @@ header button{
   margin-left: auto;
 
   font-size: 18px;
-  height: 40px;
+  height: 50px;
   padding: 0 20px;
 
   display: flex;
@@ -148,13 +150,15 @@ header button{
 
   background-color: rgba(0, 0, 0, 0.15);
 
-  border-radius: 20px;
+  border-radius: 25px;
   border-color: rgba(255, 255, 255, 0.2);
   border-width: 1px;
   border-style: solid;
-
 }
 
+.headerButton:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+}
 /* end of header */
 
 
@@ -162,46 +166,42 @@ header button{
 
 
 /* start of titleSection */
+.titleSectionBackground {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #000000, #261000);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
-.titleSection {
-  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+
+.titleSectionContent {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 50px;
+  width: 100%;
   height: 100vh;
   display: flex; /* Flexboxコンテナにする */
   align-items: center; /* 子要素を垂直方向の中央に配置 */
-  padding: 50px;
-  box-sizing: border-box;   /* paddingを含めても全体の幅が100vwを超えないようにする */
 
-  background:linear-gradient(to bottom, #000000, #150f00);
+
+
+
 }
 
+/* start of titleSectionLeft */
 .titleSectionLeft{
-  width: 100%; /* 横幅いっぱいに広げる */
+  width: 60%;
   display: grid;
-  justify-items: start;     /* 水平方向の左揃え */
+  justify-items: start;
 }
 
 .titleText {
   display: flex;
   flex-direction: column;
-  /* "Funnel Display"が使えない場合に備えて、汎用のsans-serifを追加 */
   font-family: "Funnel Display", sans-serif;
-  margin: 0;
-}
-
-.tagLine{
-  font-size: 20px;
-  color: #888888;
-  font-weight: 400;
-  margin: 0;
-  font-family: "Funnel Display", sans-serif;
-}
-
-.firstLine{
-  font-size: 60px;
-  background: linear-gradient(to bottom, #f5f5f5, #999999); /* 上から下へのグラデーション */
-  -webkit-background-clip: text; /* Safariなどのブラウザ対応 */
-  color: transparent;
-  font-weight: 400;
   margin: 0;
 }
 
@@ -212,9 +212,27 @@ header button{
   filter: drop-shadow(0px 0px 20px rgba(255, 166, 0, 1));
 }
 
+.tagText{
+  font-size: 20px;
+  color: #888888;
+  font-weight: 400;
+  margin: 0;
+  font-family: "Funnel Display", sans-serif;
+}
+
+.firstLine{
+  font-size: 80px;
+  background: linear-gradient(to bottom, #f5f5f5, #999999); /* 上から下へのグラデーション */
+  -webkit-background-clip: text; /* Safariなどのブラウザ対応 */
+  color: transparent;
+  font-weight: 400;
+  margin: 0 10px 0 0;
+  line-height: 80px;
+}
+
 .secondLine{
-  margin-top: -10px;
-  height: 60px; /* pタグ1行分の高さを指定 */
+  margin-top: 10px;
+  height: 70px; /* pタグ1行分の高さを指定 */
   line-height: 60px; /* 高さと合わせることで垂直中央揃えに */
   overflow: hidden; /* はみ出たテキストを隠す */
 }
@@ -224,8 +242,8 @@ header button{
 }
 
 .scrollContainer p{
-  font-size: 50px;
-  height: 60px;
+  font-size: 55px;
+  height: 70px;
   background: linear-gradient(to bottom, #ffa600, #cc8400); /* 上から下へのグラデーション */
   -webkit-background-clip: text; /* Safariなどのブラウザ対応 */
   color: transparent;
@@ -233,17 +251,173 @@ header button{
   margin: 0 0 0 0;
 }
 
-/* end of header */
+/* responsive */
+@media (max-width: 570px) {
+  .tagLine{
+    font-size: 15px;
+    color: #888888;
+    font-weight: 400;
+    margin: 0;
+    font-family: "Funnel Display", sans-serif;
+  }
+  .firstLine{
+    font-size: 55px;
+    background: linear-gradient(to bottom, #f5f5f5, #999999); /* 上から下へのグラデーション */
+    -webkit-background-clip: text; /* Safariなどのブラウザ対応 */
+    color: transparent;
+    font-weight: 400;
+    margin: 0;
+    line-height: 60px;
+  }
+  .secondLine{
+    margin-top: -5px;
+    height: 70px; /* pタグ1行分の高さを指定 */
+    line-height: 60px; /* 高さと合わせることで垂直中央揃えに */
+    overflow: hidden; /* はみ出たテキストを隠す */
+  }
+  .scrollContainer{
+    animation: scroll-text 10s cubic-bezier(.8,0,.2,1) infinite; /* アニメーション名 時間 繰り返し */
+
+  }
+  .scrollContainer p{
+    font-size: 30px;
+    height: 70px;
+    background: linear-gradient(to bottom, #ffa600, #cc8400); /* 上から下へのグラデーション */
+    -webkit-background-clip: text; /* Safariなどのブラウザ対応 */
+    color: transparent;
+    font-weight: 400;
+    margin: 0 0 0 0;
+  }
+}
+/* responsive-end */
+/* end of titleSectionLeft */
+
+/* start of titleSectionRight */
+.titleSectionRight {
+  width: 40%;
+  height: 100%;
+}
+
+.marquee-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  -webkit-mask-image: -webkit-linear-gradient(
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.marquee-track {
+  display: flex;
+  flex-direction: column;
+  animation: marquee-vertical 80s linear infinite;
+}
+
+/*pause animation while hovered*/
+/*.marquee-container:hover .marquee-track {*/
+/*  animation-play-state: paused;*/
+/*}*/
+
+.marquee-item {
+  width: 100%;
+  padding-bottom: 20px; /* アイテム間の隙間 */
+  box-sizing: border-box;
+  position: relative; /* p要素の位置決めの基準点にする */
+  text-decoration: none; /* aタグの下線を消す */
+}
+
+.marquee-item img {
+  width: 100%;
+  height: auto; /* アスペクト比を維持 */
+  display: block;
+  border-radius: 10px;
+}
+
+.marquee-item p {
+  position: absolute; /* 親要素(.marquee-item)を基準に絶対配置 */
+  bottom: 20px;
+  left: 0;
+
+  color: white;
+  margin: 0;
+  padding: 15px 15px;
+  width: 100%;
+  box-sizing: border-box;
+
+  font-family: "Funnel Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+
+  /* 画像の下部にグラデーションをかけてテキストを読みやすくする */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  border-bottom-left-radius: 10px;  /* 画像の角丸に合わせる */
+  border-bottom-right-radius: 10px; /* 画像の角丸に合わせる */
+}
+
+.marquee-item p{
+  position: absolute;
+}
+
+/*responsive*/
+@media (max-width: 950px) {
+  .titleSectionRight{
+    visibility: collapse;
+  }
+  .titleSectionLeft{
+    width: 100%;
+  }
+  .titleSectionRight{
+    width: 0;
+  }
+}
+
+/* end of titleSectionRight */
+/* end of titleSection */
 
 
 /* start of content */
 .content{
+  max-width: 1600px;      /* titleSection-content と同じ最大幅を設定 */
+  margin: 0 auto;         /* 中央揃え */
+  padding: 50px;
   height: 500px;
-  background-color: black;
+  background-color: #0c0500;
+}
+
+.contentTitle{
+  font-family: "Funnel Display", sans-serif;
+  font-size: 40px;
+  color: white;
+  margin: 0;
 }
 
 
 
+
+
+
+
+
+
+
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
 
 @keyframes scroll-text {
   /* --- 1つ目のテキスト --- */
@@ -256,27 +430,27 @@ header button{
   }
   /* --- 2つ目のテキストへ移動 --- */
   33% {
-    transform: translateY(-60px);
+    transform: translateY(-70px);
   }
   /* --- 2つ目のテキスト --- */
   /* 表示 */
   33% {
-    transform: translateY(-60px);
+    transform: translateY(-70px);
   }
   58% {
-    transform: translateY(-60px);
+    transform: translateY(-70px);
   }
   /* --- 3つ目のテキストへ移動 --- */
   66% {
-    transform: translateY(-120px);
+    transform: translateY(-140px);
   }
   /* --- 3つ目のテキスト --- */
   /* 表示 */
   66% {
-    transform: translateY(-120px);
+    transform: translateY(-140px);
   }
   91% {
-    transform: translateY(-120px);
+    transform: translateY(-140px);
   }
   /* --- 最初のテキストへ戻る --- */
   100% {
