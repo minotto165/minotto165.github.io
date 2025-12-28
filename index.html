@@ -27,11 +27,48 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
+<script>
+  alert("baka ne")
+</script>
+
+<style>
+  .headtxt{
+    font-size: 80px;
+    background: linear-gradient(to bottom, #FF0000, #FFFF00, #00FF00, #00FFFF, #0000FF, #FF00FF);
+    -webkit-background-clip: text; /* Safariなどのブラウザ対応 */
+    color: transparent;
+    line-height: 80px;
+    font-family: "HG創英角ﾎﾟｯﾌﾟ体";
+  }
+  .csskanzen{
+    font-size: 80px;
+    background: white;
+    line-height: 80px;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: "HG創英角ﾎﾟｯﾌﾟ体";
+    text-align: left;
+    width: 400px;
+    letter-spacing: -10px;
+    white-space: nowrap;
+  }
+  .headerButton{
+    white-space: nowrap;
+  }
+ .customtext{
+    font-size: 80px;
+    background: linear-gradient(to bottom, #FF0000, #FFFF00, #00FF00, #00FFFF, #0000FF, #FF00FF);
+    -webkit-background-clip: text; /* Safariなどのブラウザ対応 */
+    color: transparent;
+    line-height: 80px;
+  }
+</style>
+
 <body>
   <!-- Add your site or application content here -->
   <header>
-    <h1>minotto</h1>
-    <button class="headerButton">contact</button>
+    <h1 class="headtxt">みっのと</h1>
+    <button class="headerButton"><p class="csskanzen">まいばすけっと</p></button>
   </header>
 
   <main>
@@ -43,8 +80,7 @@
               Home
             </p>
             <p class="firstLine">
-              Hi, I'm <span>Minotto</span>, a
-            </p>
+              hello guys im <span>Minotto</span> today im gonna talk about the important thing in my whole</p>
             <div class="secondLine">
               <div class="scrollContainer">
                 <p>
@@ -58,6 +94,12 @@
                 </p>
               </div>
             </div>
+            <p class="firstLine">
+               life so please listen. before that please do not forget to subscribe to our channel
+            </p>
+            <p class="customtext">
+              野獣先輩を3連続で当てられたら何か起こるかも！？<br>クリックして止める→
+            </p>
           </div>
         </div>
         <!-- D:/Web/portfolio/index.html -->
@@ -67,56 +109,17 @@
           <div class="marquee-container">
             <!-- 実際にスクロールするトラック -->
             <div class="marquee-track">
-              <!-- 画像アイテムのリスト（1セット目） -->
-              <a class="marquee-item" href="https://www.youtube.com/watch?v=Y26CcBWEJSM" target="_blank" rel="noopener noreferrer">
-                <img src="img/alis.webp" alt="ALIS-YTPMV thumbnail">
-                <p>ST (YTPMV) - YouTube</p>
+              <a class="marquee-item" href="https://x.com/MikasaFeetBlud/status/2003349111303733718?s=20" target="_blank" rel="noopener noreferrer">
+                <img src="https://chie-pctr.c.yimg.jp/dk/iwiz-chie/que-13293354308?w=309&cch=709&up=0&exp=3600" alt="ALIS-YTPMV thumbnail">
+                <p>こんにちは</p>
               </a>
-              <a class="marquee-item" href="https://www.youtube.com/watch?v=vYJfYC4U99Y" target="_blank" rel="noopener noreferrer">
-                <img src="img/ding.webp" alt="Ding-YTPMV thumbnail">
-                <p>Ding (YTPMV) - YouTube</p>
+              <a class="marquee-item" href="https://x.com/MikasaFeetBlud/status/2003349111303733718?s=20" target="_blank" rel="noopener noreferrer">
+                <img src="https://chie-pctr.c.yimg.jp/dk/iwiz-chie/que-13293354308?w=309&cch=709&up=0&exp=3600" alt="ALIS-YTPMV thumbnail">
+                <p>こんにちは</p>
               </a>
-              <a class="marquee-item" href="https://github.com/minotto165/EatenDLP" target="_blank" rel="noopener noreferrer">
-                <img src="img/EatenDLP.png" alt="EatenDLP thumbnail">
-                <p>ST (software) - GitHub</p>
-              </a>
-              <a class="marquee-item" href="https://www.youtube.com/watch?v=gDXgJZcJRbM" target="_blank" rel="noopener noreferrer">
-                <img src="img/shimokita.webp" alt="Shimokitazawa-YTPMV thumbnail">
-                <p>SHIMOKAI ZONE (YTPMV) - YouTube</p>
-              </a>
-              <a class="marquee-item" href="https://www.youtube.com/watch?v=qEwbdelaSuk" target="_blank" rel="noopener noreferrer">
-                <img src="img/youkaiWin.webp" alt="Youkai-Windows-YTPMV thumbnail">
-                <p>Re: Youkai Windows (YTPMV) - YouTube</p>
-              </a>
-              <a class="marquee-item" href="https://www.youtube.com/watch?v=iM7pgl4OHko" target="_blank" rel="noopener noreferrer">
-                <img src="img/youkansai.webp" alt="Youkansai-Airport-YTPMV thumbnail">
-                <p>YOUKANSAI AIRPORT (YTPMV) - YouTube</p>
-              </a>
-
-              <!-- 途切れさせないための複製リスト（2セット目） -->
-              <a class="marquee-item" href="https://www.youtube.com/watch?v=Y26CcBWEJSM" target="_blank" rel="noopener noreferrer" aria-hidden="true">
-                <img src="img/alis.webp" alt="">
-                <p>ST (YTPMV) - YouTube</p>
-              </a>
-              <a class="marquee-item" href="https://www.youtube.com/watch?v=vYJfYC4U99Y" target="_blank" rel="noopener noreferrer" aria-hidden="true">
-                <img src="img/ding.webp" alt="">
-                <p>Ding (YTPMV) - YouTube</p>
-              </a>
-              <a class="marquee-item" href="https://github.com/minotto165/EatenDLP" target="_blank" rel="noopener noreferrer" aria-hidden="true">
-                <img src="img/EatenDLP.png" alt="">
-                <p>ST (software) - GitHub</p>
-              </a>
-              <a class="marquee-item" href="https://www.youtube.com/watch?v=gDXgJZcJRbM" target="_blank" rel="noopener noreferrer" aria-hidden="true">
-                <img src="img/shimokita.webp" alt="">
-                <p>SHIMOKAI ZONE (YTPMV) - YouTube</p>
-              </a>
-              <a class="marquee-item" href="https://www.youtube.com/watch?v=qEwbdelaSuk" target="_blank" rel="noopener noreferrer" aria-hidden="true">
-                <img src="img/youkaiWin.webp" alt="">
-                <p>Re: Youkai Windows (YTPMV) - YouTube</p>
-              </a>
-              <a class="marquee-item" href="https://www.youtube.com/watch?v=iM7pgl4OHko" target="_blank" rel="noopener noreferrer" aria-hidden="true">
-                <img src="img/youkansai.webp" alt="">
-                <p>YOUKANSAI AIRPORT (YTPMV) - YouTube</p>
+              <a class="marquee-item" href="https://x.com/MikasaFeetBlud/status/2003349111303733718?s=20" target="_blank" rel="noopener noreferrer">
+                <img src="https://chie-pctr.c.yimg.jp/dk/iwiz-chie/que-13293354308?w=309&cch=709&up=0&exp=3600" alt="ALIS-YTPMV thumbnail">
+                <p>こんにちは</p>
               </a>
             </div>
           </div>
@@ -130,61 +133,13 @@
       <p class="contentTitle">
         I'm making...
       </p>
+      <style>
+        .aboutContainer {
+          font-size: 80px
+        }
+      </style>
       <div class="aboutContainer">
-        <div class="makingContentContainer">
-          <div class="swiper makingSwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="img/alis.webp" alt="ALIS-YTPMV thumbnail">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/ding.webp" alt="Ding-YTPMV thumbnail">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/shimokita.webp" alt="Shimokitazawa-YTPMV thumbnail">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/youkaiWin.webp" alt="Youkai-Windows-YTPMV thumbnail">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/youkansai.webp" alt="Youkansai-Airport-YTPMV thumbnail">
-              </div>
-            </div>
-            <!-- ページネーション -->
-            <div class="swiper-pagination"></div>
-          </div>
-
-          <p>
-            YTPMV/OtoMAD.
-          </p>
-        </div>
-        <div class="makingContentContainer">
-          <div class="swiper makingSwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="img/EatenDLP.png" alt="ALIS-YTPMV thumbnail">
-              </div>
-
-            </div>
-            <!-- ページネーション -->
-            <div class="swiper-pagination"></div>
-          </div>
-          <p>
-            software.
-          </p>
-        </div>
-        <div class="makingContentContainer">
-          <div class="swiper makingSwiper">
-            <div class="swiper-wrapper">
-              <!-- ここに「graphic design」関連のスライドを挿入します -->
-            </div>
-            <!-- ページネーション -->
-            <div class="swiper-pagination"></div>
-          </div>
-          <p>
-            graphic design.
-          </p>
-        </div>
+        🤗
       </div>
     </div>
   </main>
