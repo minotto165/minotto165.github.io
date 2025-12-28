@@ -1,0 +1,1 @@
+document.querySelectorAll(".swiper").forEach(e=>{new Swiper(e,{loop:!0,autoplay:{delay:3e3,disableOnInteraction:!1},pagination:{el:".swiper-pagination",clickable:!0},mousewheel:!0,grabCursor:!0})});
